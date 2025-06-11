@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Engagement Project</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #f0f4f8, #e2e8f0);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #0f172a, #3b82f6);
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 20px 0 10px;
+      color: #1e293b;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .gallery {
+      margin-top: 20px;
+      padding: 20px;
+      background: #e5e7eb;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border: 2px dashed #94a3b8;
+    }
+
+    .placeholder {
+      background: #cbd5e1;
+      height: 120px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #475569;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      background: #f1f5f9;
+      padding: 25px;
+      text-align: center;
+      color: #475569;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>E-Commerce Platform</h1>
+    <p>A Professional E-Commerce Platform Designed for Engagement & Conversion</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Project Objective</h2>
+      <p>To develop a clean, user-friendly, and visually appealing e-commerce experience that drives engagement, enhances product discovery, and increases conversions.</p>
+    </div>
+
+    <div class="card">
+      <h2>Core Features</h2>
+      <ul>
+        <li>Responsive Product Grid with Filters</li>
+        <li>One-Click Checkout with Cart Sync</li>
+        <li>Personalized Recommendations</li>
+        <li>Secure Payment Gateway Integration</li>
+        <li>Live Chat Support Widget</li>
+        <li>Wishlist & Save-for-Later</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Design Focus</h2>
+      <ul>
+        <li><strong>Minimalist Aesthetic</strong> – Clutter-free layout to spotlight products</li>
+        <li><strong>Microinteractions</strong> – Hover effects, animations, and feedback elements</li>
+        <li><strong>Mobile Optimization</strong> – Adaptive UI for all screen sizes</li>
+        <li><strong>Color Psychology</strong> – Trust and action-focused palette</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Tech Stack</h2>
+      <p>React.js, TailwindCSS, Firebase, Stripe API, Framer Motion</p>
+    </div>
+
+    <div class="card">
+      <h2>Impact</h2>
+      <ul>
+        <li>📈 Conversion rate increased by <strong>42%</strong> within the first 60 days</li>
+        <li>⏱️ Average session time improved by <strong>65%</strong></li>
+        <li>❤️ Bounce rate dropped by <strong>28%</strong> due to better UX</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <button id="showGallery">Show Visual Samples</button>
+      <div class="gallery hidden" id="gallery">
+        <p>🛒 Insert product grid mockups, homepage layout, and checkout screenshots here</p>
+        <div class="placeholder">[Homepage Preview]</div>
+        <div class="placeholder">[Product Page Grid]</div>
+        <div class="placeholder">[Mobile Checkout View]</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ShopFlow Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("showGallery").addEventListener("click", function () {
+      const gallery = document.getElementById("gallery");
+      gallery.classList.toggle("hidden");
+      this.textContent = gallery.classList.contains("hidden")
+        ? "Show Visual Samples"
+        : "Hide Visual Samples";
+    });
+  </script>
+
+</body>
+</html>
